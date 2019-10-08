@@ -1,0 +1,9 @@
+zgoubi -in jleicn0track.dat 
+
+grep -A12 ' :  BEND' zgoubi.res | grep Field | sed -e "s/^\s*//" | sed -e "s/kG .*$/kG/" > fieldvals.txt
+
+grep -A6 ' :  BEND' zgoubi.res | grep 'Arc length' | sed -e "s/^\s*//" | sed -e "s/cm .*$/cm/" > arclengths.txt
+
+paste zgoubi.fai fieldvals.txt > extended.txt
+
+ grep -A12 ' :  BEND' zgoubi.res | grep Field > fieldstuff.txt
