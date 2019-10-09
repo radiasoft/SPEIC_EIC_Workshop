@@ -1,0 +1,61 @@
+ePSR, computation tunes and chromaticities
+
+ 'OBJET'
+4869.148131767104
+5
+0.001 0.01  0.001 0.01  0.001 0.0001  ! dY/cm dT/mr dZ/cm dP/mr dS/cm dD/1
+0.    0.    0.    0.    0.    1.      ! Y0/cm T0/m0 Z0/cm P0/m0 S0/cm D0/1
+
+ 'PARTICUL'
+PROTON
+
+ 'SPNTRK'
+0
+
+ 'SCALING'
+1 3
+BEND
+-1
+4869.148131767104
+1
+MULTIPOL QUAD
+-1
+4869.148131767104
+1
+MULTIPOL SEXT
+-1
+4869.148131767104
+1
+
+ 'OPTIONS'
+1 1
+WRITE OFF
+
+!--- import lattice ---
+ 'INCLUDE'
+1
+PSR_Lattice.dat
+!----------------------
+
+ 'OPTIONS'
+1 1
+WRITE ON
+
+ 'FIT2'
+2  save
+1 30 0 [-1.,+1.]
+1 31 0 [-100.,+100.]
+2  1.D-11  9999
+3.1  1  2  #End 0. 1. 0   ! Yf = Yi
+3.1  1  3  #End 0. 1. 0   ! Tf = Ti
+
+ 'MATRIX'
+1 11  PRINT
+
+ 'REBELOTE'
+4 0.1 0 1
+1
+OBJET 35  1.001  0.999  1.0001  0.9999
+
+ 'END'
+

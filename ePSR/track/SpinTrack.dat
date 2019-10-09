@@ -1,0 +1,50 @@
+ePSR, computation of dn / d\delta
+
+ 'OPTIONS'
+1 1
+WRITE OFF
+
+ 'OBJET'
+_BRHOi
+2
+3 3
+ 0.00  0.00  0.00  0.00  0.00  1.00  ' '
+ 0.00  0.00  0.05  0.00  0.00  1.00  ' '
+ 0.00  0.00  0.10  0.00  0.00  1.00  ' '
+1 1 1
+
+ 'PARTICUL'
+POSITRON
+
+ 'SPNTRK'
+3
+
+ 'FAISTORE'
+zgoubi.fai
+1
+
+ 'SCALING'
+1 2
+BEND
+2
+_BRHOi/1000 _BRHOf/1000
+1 _NTurns
+MULTIPOL
+2
+_BRHOi/1000 _BRHOf/1000
+1 _NTurns
+
+ 'INCLUDE'
+ 1
+ PSR_Lattice.dat
+
+ 'CAVITE'
+2.0
+90.224  1.0
+_CavV  5.235987755983e-01
+
+ 'REBELOTE'
+_NTurns-1 0 99
+
+ 'END'
+
