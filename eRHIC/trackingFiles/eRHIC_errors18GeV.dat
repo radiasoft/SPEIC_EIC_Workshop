@@ -1,0 +1,91 @@
+!eRHIC lattice from F. Meot, originally named run128.res
+
+'MCOBJET'                                                                                                    1
+59534.947331999996
+3
+1
+2 2 2 2  1 1
+0. 0. 0. 0. 0.  1.
+0.000045 0.61    0.e-10  6.
+0.002082 0.075   0.e-13  6.
+0.       1.    0.    1
+2222744 4067948 3942930
+ 
+ 'PARTICUL'                                                                                                   2
+ELECTRON
+ 'SPNTRK'                                                                                                     3
+4.1     
+1. 0. 0.
+ 
+ 'FAISCEAU'                                                                                                   4
+ 'FAISTORE'                                                                                                   5
+eRHIC_errors18GeV_10turn.fai          ! none    !  zgoubi.fai  for tracking
+11
+ 
+ 'SRLOSS'                                                                                                     6
+1
+MULTIPOL
+0     9144894
+!0     9144893
+ 
+'ERRORS'                                                                                                           7
+0 1 123466 PRINT               dB(kG)
+MULTIPOL{}  2  XR A U 0.d0   0.002  9999  
+  
+ 'SCALING'                                                                                                    7
+1  6
+SOLENOID
+-1
+59.534947331999994
+1
+MULTIPOL
+-1
+59.534947331999994
+1
+MULTIPOL HQF    !  FIT #12
+-1
+59.534947331999994    ! 33.359338   !  33.3564095E+00
+1
+MULTIPOL HQD    !  FIT #16
+-1
+59.534947331999994    ! 33.355311   !  33.3564095E+00
+1
+MULTIPOL SX1    !  FIT #20
+-1
+59.534947331999994
+1
+MULTIPOL SX2    !  FIT #22
+-1
+59.534947331999994
+1
+ 
+ 'OPTIONS'                                                                                                    8
+1 1
+WRITE ON
+
+'INCLUDE'
+1
+eRHIC.inc[RING$STARTMARK:RING$END]
+
+'CAVITE'                                                                                                  4050
+2     !  .1          .1 is to print to zgoubi.CAVITE.out for plot using zpop/7/20
+3834.89959     7201
+71E+06     0.6283185307
+ 
+'REBELOTE'                                                                                                4051
+10 0.4 99
+234800 0.4 99
+ 
+ 'OPTIONS'                                                                                                 4052
+1 1
+WRITE ON
+ 
+ 'FAISCEAU'                                                                                                4053
+ 'SPNPRT'  PRINT                                                                                           4054
+ 'SRPRNT'                                                                                                  4055
+ 
+ 'END'         
+
+
+
+
